@@ -43,7 +43,7 @@ services:
   # Database
   #######################################
   {DOMAIN_NAME}-mysql:
-    image: mariadb
+    image: mariadb:10.4
     container_name: {DOMAIN_NAME}-mysql
     environment:
       MYSQL_ROOT_PASSWORD : ${MYSQL_ROOT_PASSWORD}
