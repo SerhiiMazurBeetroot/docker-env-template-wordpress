@@ -42,11 +42,13 @@ services:
   # Database
   #######################################
   {DOMAIN_NAME}-mysql:
-    image: mariadb:10.4
+    image: mariadb:10.11
     container_name: {DOMAIN_NAME}-mysql
     environment:
-      MYSQL_ROOT_PASSWORD : ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE : ${MYSQL_DATABASE}
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     restart: always
     ports:
       - '${PORT}:3306'
